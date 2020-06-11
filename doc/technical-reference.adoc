@@ -12,39 +12,48 @@
 |===
 
 
-== ⦁	List of Operations Supported by the  Splunk Connector:
+== ⦁	List of Operations Supported by the  Splunk Process Connector:
 
 [%header%autowidth.spread]
 |===
 |Sr.No |Business Function |Operations |Description |Inbound |Outbound
-|1 |Run one shot search |POST request |Run one shot search is used for creating search id for jobs.|Required parameters are optional. |Return JSON or XML response according to the configuration done.
-|2 |Get jobs |GET Request |Get jobs operation is used to get details of all existing jobs.|Required parameters are optional.| Return JSON or XML response according to the configuration done.
-|3.1 |Run blocking search |GET request |Run blocking search operation  for get is used for accessing the search job based on search id. |Required parameters are optional. |Return JSON or XML response according to the configuration done.
-|3.2 |Run blocking search |POST request |Run blocking search operation  for post is used for creating search id. |Custom is the required parameter.|Return JSON or XML response according to the configuration done.
-|4 |Get applications |GET request |Get applications is used to manage local apps. |Required parameters are optional. |Return JSON or XML response according to the configuration done.
-|5 |Get saved search |GET request |Get saved search is used for accessing saved search configurations. |Required parameters are optional. |Return JSON or XML response according to the configuration done.
-|6 |Create saved search |POST request |Create saved search Operation is used for creating saved search. |*Name* and *Search* are the required parameters. |Return JSON or XML response according to the configuration done.
-|7 |View saved search properties |GET request |View saved search properties Operation is used for accessing search configurations based on Search name. |Required parameters are optional. |Return JSON or XML response according to the configuration done.
-|8 |Modify saved search properties |POST request |Modify saved search properties operation is used to modify saved search configuration. |Name and search are the required parameters. |Return JSON or XML response according to the configuration done.
-|9 |Get saved search history |GET request |Get saved search history operation is used to list available search jobs created from the {name} saved search. |Required parameters are optional. |Return JSON or XML response according to the configuration done.
-|10 |Run saved search |POST request |Run saved search operation  is used to dispatch saved search. |Required parameters are optional. |Return JSON or XML response according to the configuration done.
-|11 |Delete saved search |DELETE request |Delete saved search operation is used to delete specific saved search. |No required parameters. |Return JSON or XML response according to the configuration done.
-|12 |Get data model |GET request |Get data model operation is used to access specific data models. |Required parameters are optional. |Return JSON or XML response according to the configuration done.
-|13 |Get data models |GET request |Get data models operation is used to list data models on the server. |Required parameters are optional. |Return JSON or XML response according to the configuration done.
-|14 |Get inputs |GET request |Get inputs operation is used to list all inputs,including modular inputs. |Required parameters are optional. |Return JSON or XML response according to the configuration done.
-|15 |Get input |GET request |Get input operation is used to list details for the {name} input. |Required parameters are optional. |Return JSON or XML response according to the configuration done.
-|16 |Create input |POST request |Create input operation is used to create the token. |*Name* is a required parameter. |Return JSON or XML response according to the configuration done.
-|17 |Modify input |POST request |Modify input operation is used to update token configuration information. |*Name* is a required parameter. |Return JSON or XML response according to the configuration done.
-|18 |Remove Input |DELETE request |Remove Input operation is used to delete the operation. |No required parameters. |Return JSON or XML response according to the configuration done.
-|19 |Add Data To Tcp Input |POST request |Add Data To Tcp Input operation is used to update the container for managing data. |Required parameters are optional. |Return JSON or XML response according to the configuration done.
-|20 |Add Data To Udp Input |POST request |Add Data To Udp Input operation is used to edit properties of the named UDP data input. |Required parameters are optional. |Return JSON or XML response according to the configuration done.
-|21 |Get Indexes |GET request |Get Indexes operation is used for listing the recognized indexes on the server. |Required parameters are optional. |Return JSON or XML response according to the configuration done.
-|22 |Create Index |POST request |Create Index operation is used for creating a new index. |Required parameters are optional. |Return JSON or XML response according to the configuration done.
-|23 |Modify indexes |POST request |Modify indexes operation is used for updating the {name} index. |Required parameters are optional. |Return JSON or XML response according to the configuration done.
-|24 |Get Index |GET request |Get Index operation is used for accessing information about the {name} index. |Required parameters are optional. |Return JSON or XML response according to the configuration done.
-|25 |Clean Index |POST request |Clean Index operation is used to cleanIndex. |Required parameters are optional. |Return JSON or XML response according to the configuration done.
-|26 |Remove Index |DELETE request |Remove Index operation is used to remove the {name} index and the data contained in it. |No required parameters. |Return JSON or XML response according to the configuration done.
-|27 |Add Data To Index |POST request |Add Data To Index operation is used for updating the {name} index. |Required parameters are optional. |Return JSON or XML response according to the configuration done.
+|1 |Run one shot search |POST request |Start a new search and return the search ID (<sid>).|*Search* is the required parameter. |Return JSON or XML response according to the configuration.
+|2 |Get jobs |GET Request |Get details of all current searches.|Parameters optional.| Return JSON or XML response according to the configuration.
+|3 |Run blocking search |GET request |Get information about the {search_id} search job.|Custom is the required parameter.|Return JSON or XML response according to the configuration.
+|4 |Get applications |GET request |List installed apps and properties. |Parameters optional. |Return JSON or XML response according to the configuration.
+|5 |Get saved search |GET request |Access saved search configurations. |Parameters optional. |Return JSON or XML response according to the configuration.
+|6 |Create saved search |POST request |Create a saved search.|*Name* and *Search* are the required parameters. |Return JSON or XML response according to the configuration.
+|7 |View saved search properties |GET request |Access the named saved search. |Parameters optional. |Return JSON or XML response according to the configuration.
+|8 |Modify saved search properties |POST request |Update the named saved search. |*Name* and *search* are the required parameters. |Return JSON or XML response according to the configuration.
+|9 |Get saved search history |GET request |List available search jobs created from the {name} saved search. |Parameters optional. |Return JSON or XML response according to the configuration.
+|10 |Run saved search |POST request |Dispatch the {name} saved search. |Parameters optional. |Return JSON or XML response according to the configuration.
+|11 |Delete saved search |DELETE request |Delete the named saved search. |No required parameters. |Return JSON or XML response according to the configuration.
+|12 |Get data model |GET request |Access a specific data model. |Parameters optional. |Return JSON or XML response according to the configuration.
+|13 |Get data models |GET request |List data models on the server. |Parameters optional. |Return JSON or XML response according to the configuration.
+|14 |Get inputs |GET request |List all inputs, including modular inputs. |Parameters optional. |Return JSON or XML response according to the configuration.
+|15 |Get input |GET request |List details for the {name} input. |Parameters optional. |Return JSON or XML response according to the configuration.
+|16 |Create input |POST request |Modify global configuration. Add and modify tokens. |*Name* is a required parameter. |Return JSON or XML response according to the configuration.
+|17 |Modify input |POST request |Update token configuration information. |*Name* is a required parameter. |Return JSON or XML response according to the configuration.
+|18 |Remove Input |DELETE request |Delete a token. |No required parameters. |Return JSON or XML response according to the configuration.
+|19 |Add Data To Tcp Input |POST request |Update the container for managing data. |Parameters optional. |Return JSON or XML response according to the configuration.
+|20 |Add Data To Udp Input |POST request |Edit properties of the named UDP data input. |Parameters optional. |Return JSON or XML response according to the configuration.
+|21 |Get Indexes |GET request |List the recognized indexes on the server.|Parameters optional. |Return JSON or XML response according to the configuration.
+|22 |Create Index |POST request |Create a new index. |Parameters optional. |Return JSON or XML response according to the configuration.
+|23 |Modify indexes |POST request |Updates the {name} index. |Parameters optional. |Return JSON or XML response according to the configuration.
+|24 |Get Index |GET request |Access information about the {name} index. |Parameters optional. |Return JSON or XML response according to the configuration.
+|25 |Clean Index |POST request |clean index. |Parameters optional. |Return JSON or XML response according to the configuration.
+|26 |Remove Index |DELETE request |Removes the {name} index and the data contained in it. |No required parameters. |Return JSON or XML response according to the configuration.
+|27 |Add Data To Index |POST request |Update the {name} index. |Parameters optional. |Return JSON or XML response according to the configuration.
+|===
+
+== ⦁	List of Operations Supported by the  Splunk Source Connector:
+
+[%header%autowidth.spread]
+|===
+|Sr.No |Business Function |Operations |Description |Inbound |Outbound
+|1 |On Run Export Search |POST Request | return a large set of results.|*earliestTime,* *latestTime,* *searchQuery* are the required parameters. |Return JSON or XML response according to the configuration.
+|2 |On Run Normal Search |POST Request |returns a search job immediately.|*searchQuery* is the required parameter.| Return JSON or XML response according to the configuration.
+|3 |On Run RealTime Search |POST Request |return live events as they are indexed.|*searchQuery* is the required parameter.|Return JSON or XML response according to the configuration.
 |===
 
 ==  ⦁   Configuration for Splunk Connector
