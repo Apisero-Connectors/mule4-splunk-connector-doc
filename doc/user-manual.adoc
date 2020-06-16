@@ -94,7 +94,6 @@ image:img/global_config_test_connection.png[]
 	</splunk:config>
 ```
 
-* * Note* [[[how to get properties(note)]]]
 
 == ​To Create a Mule Project in Anypoint Studio 7
 

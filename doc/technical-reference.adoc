@@ -69,6 +69,45 @@ To use Splunk Connector, you will require the following configuration properties
 
     Connection Idle Timeout : Timeout for connection, in Seconds(Default).
 
+==  ⦁   To connect in Design Center
+
+⦁ In Design Centre, click Create and choose Mule Application.
+
+⦁ Click a trigger such as an HTTP Listener or the Scheduler trigger.
+
+image:img/HTTP_Listener_DesignCenter1.png[]
+
+⦁ To create an HTTP global element for the connector, set these fields:
+image:img/HTTP_Listener_DesignCenter.png[]
+
+[%header%autowidth.spread]
+|===
+|Field |Description
+|Protocol |Protocol selected for the HTTP connector, it can be HTTP or HTTPS (secure).
+|Host |IP address where your Mule application listens for requests.
+|Port |Port address where your Mule application listens for requests.
+|Base Path |Path where your Mule application listens for requests.
+|===
+
+⦁	Select the plus sign to add a component.
+
+⦁	Select the Splunk connector as a component.
+
+⦁	Select an operation:
+
+image:img/Splunk_DesignCentre.png[]
+
+⦁	Configure the Global element for the connector:
+
+image:img/Splunk_Configuration_DesignCentre.png[]
+
+image:img/Splunk_Configuration_DesignCentre1.png[]
+
+image:img/Splunk_Configuration_DesignCentre2.png[]
+
+
+⦁	Fill the required parameters (if any) for the above selected operation.
+
 
 
 ==  ⦁   Use case – Connectivity with salesforce
