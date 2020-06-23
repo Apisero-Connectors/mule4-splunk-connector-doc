@@ -23,3 +23,6 @@ The Splunk Connector is compatible with these software versions:
 
 === Version 2.0.0 - New features
 * This is the first release.
+
+== See Also
+* https://github.com/Apisero-Connectors/mule4-splunk-connector-doc/blob/master/doc/user-manual.adoc[User Manual]

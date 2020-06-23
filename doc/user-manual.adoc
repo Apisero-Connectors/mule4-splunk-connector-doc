@@ -158,6 +158,6 @@ http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/
 ```
 
 == See Also
-[[[release note link]]]
+* https://github.com/Apisero-Connectors/mule4-splunk-connector-doc/blob/master/doc/release-notes.adoc[​Splunk Connector Release Notes]
 
 

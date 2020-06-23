@@ -1,1 +1,0 @@
-# mule4-splunk-connector-doc
