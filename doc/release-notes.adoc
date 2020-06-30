@@ -6,10 +6,10 @@ _MuleSoft Certified_
 
 The Splunk connector allows for connectivity to Splunk v1 & v2 shares and can be used in both on-premises and CloudHub environments.
 
-== Version 2.0.0 - 2020-04
+== Version 1.0.0 - 2020-04
 This release of Splunk Connector is compatibile with Mule 4 and it is not compatible with Mule 3 versions.
 
-=== Version 2.0.0 - Compatibility
+=== Version 1.0.0 - Compatibility
 The Splunk Connector is compatible with these software versions:
 
 [%header%autowidth.spread]
@@ -21,8 +21,11 @@ The Splunk Connector is compatible with these software versions:
 |Splunk|1
 |===
 
-=== Version 2.0.0 - New features
+=== Version 1.0.0 - New features
 * This is the first release.
 
 == See Also
+* https://www.mulesoft.com/legal/versioning-back-support-policy#anypoint-connectors[Anypoint Connectors Support Policy]
 * https://github.com/Apisero-Connectors/mule4-splunk-connector-doc/blob/master/doc/user-manual.adoc[User Manual]
+* https://forums.mulesoft.com[MuleSoft Forum]
+* https://support.mulesoft.com[Contact MuleSoft Support]
