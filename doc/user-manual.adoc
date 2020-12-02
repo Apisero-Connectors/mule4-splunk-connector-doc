@@ -30,7 +30,7 @@ To use Splunk connector, you need
 
 == What's New in this Connector
 
-* This Splunk connector 2.0.0 is compatible with Mule 4.
+* This Splunk connector 3.0.0 is compatible with Mule 4.
 
 == To Install this Connector in Anypoint Studio 7
 You can use Splunk connector in Anypoint Studio by adding it as a dependency in your Mule application.
@@ -41,8 +41,8 @@ You can use Splunk connector in Anypoint Studio by adding it as a dependency in 
 ```
 <dependency>
     <groupId>com.mulesoft.connectors</groupId>
-    <artifactId>mule-splunk-connector</artifactId>
-    <version>2.0.0</version>
+    <artifactId>mule4-splunk-connector</artifactId>
+    <version>3.0.0</version>
     <classifier>mule-plugin</classifier>
 </dependency>
 ```

@@ -7,7 +7,7 @@
 |===
 |Version  |Release Date |Revised by |Comments/ Indicate Sections Revised
 
-|A |B |C |D.
+| 3 | 15th Dec 2020 | Connector Development Team |
 
 |===
 
@@ -59,7 +59,7 @@
 ==  ⦁   Configuration for Splunk Connector
 To use Splunk Connector, you will require the following configuration properties.
 
-    Baseurl : Hostname  and URL of server hosting Splunk Server.
+    Baseurl : Hostname  and URL of server hosting Splunk Server.(Example: http://localhost:8089)
 
     Username : Enter the username  of Splunk server to log in with.
 
@@ -134,15 +134,15 @@ image:img/HTTP_Listener_Config.png[]
 
 ⦁ Add following properties.
 
-    Baseurl
+    Baseurl : (Example : http://localhost:8089)
 
-    Username
+    Username :
 
-    Password
+    Password :
 
-    Connection timeout
+    Connection timeout :
 
-    Connection Idle Timeout
+    Connection Idle Timeout :
 
 image:img/global_config.png[]
 
@@ -160,9 +160,9 @@ image:img/salesforce_global_config.png[]
 
 == UsesCases are defined below:
 
-== createIndex:
+== Create Index:
 
- This  use case demonstrates the creating Index:
+This  use case demonstrates the creating Index:
 
 ⦁  The flow gets started by Setting a variable name Index where we are fetching the name from query Params then Creating the Index using the Splunk create Index operation with name set in the variable, then we are again a setting variable named Index Links and using a transform message to do the transformation for Salesforce Database.
 
@@ -172,9 +172,9 @@ image:img/salesforce_global_config.png[]
 
 image:img/createIndex.png[]
 
-== add Data To Index:
+== Add Data To Index:
 
- This  use case demonstrates adding data to the created Index i.e, updating the Index:
+This  use case demonstrates adding data to the created Index i.e, updating the Index:
 
 ⦁  The flow gets started by Setting a variable name Index Name where we are fetching the name from query Params then we are retrieving  Index details by using query operation salesforce connector and then using a transform message to convert the Java response to Json.
 
@@ -182,9 +182,9 @@ image:img/createIndex.png[]
 
 image:img/addDataToIndex.png[]
 
-== remove Index:
+== Remove Index:
 
- This  use case demonstrates removing Index that is created :
+This  use case demonstrates removing Index that is created :
 
 ⦁  The flow gets started by Setting a variable name Index Name where we are fetching the name from query Params then we are retrieving  Index details by using query operation salesforce connector and then using a transform message to convert the Java response to Json.
 
